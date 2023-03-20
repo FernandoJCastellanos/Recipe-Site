@@ -1,0 +1,243 @@
+@import "partials/animations.scss";
+
+
+
+:root{
+    --background-color: #fff;
+    --background-light: #fff;
+    --shadow-color: rgba(0,0,0,0.2);
+    --primary-color: rgb(255,0,86);
+    --text-color: #0A0A0A;
+    --text-light: #575757;
+    --font-size: 16px;
+    --animation-speed: 1;
+    --navbar-height: 50px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    padding-top: var(--navbar-height);
+    background-color: var(--background-light);
+}
+
+a {
+    text-decoration: none;
+}
+
+img{
+    object-fit: cover;
+}
+
+@function getAnimationDuration($duration: number) {
+    @return calc($duration * var(--animation-speed));
+}
+
+.Main{
+    padding-block: 3vw;
+}
+
+
+
+.button{
+    border: none;
+    outline: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 0.5em 0.75em;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    box-shadow: 0 2px 6px var(--shadow-color);
+    &:hover{
+        box-shadow: 0 1px 3px var(--shadow-color);
+    }
+}
+
+
+.section{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 3vw;
+    .title{
+        color: var(--text-color);
+        font-size: 2.5em;
+        margin-bottom: 0.25em;
+        font-weight: 900;
+    }
+    .info{
+        color: var(--text-light);
+        font-size: 1em;
+        letter-spacing: 1px;
+        line-height: 1.3;
+        margin-bottom: 1.25em;
+    }
+    .col{
+        width: 50%;
+    }
+    &.d-block{
+        display: block;
+    }
+}
+
+.custom-image{
+    height: 0;
+    width: 100%;
+    position: relative;
+    img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@import "partials/navbar.scss";
+
+@import "partials/hero-section.scss";
+
+@import "partials/improve-section.scss";
+
+@import "partials/quote-section.scss";
+
+@import "partials/chefs-section";
+
+@import "partials/previous-searches";
+
+@import "partials/recipe-section";
+
+
+.options-container{
+    box-shadow: 0 5px 10px var(--shadow-color);
+    padding: 1em;
+    border-radius: 5px;
+    border-left: 0.5em solid var(--primary-color);
+    background-color: var(--background-light);
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    .option{
+        height: 3.5em;
+        width: 3.5em;
+        box-shadow: 0 3px 6px var(--shadow-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &.light{
+            background-color: #fff;
+        }
+        &.dark{
+            background-color: rgb(29, 29, 29);
+        }
+        .check{
+            height: 2.5em;
+            width: 2.5em;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px var(--shadow-color);
+            svg{
+
+                height: 1.5em;
+                width: 1.5em;
+            }
+        }
+    }
+    .button span{
+        margin-left: 0.5em;
+        display: inline-block;
+    }
+    .button{
+        font-size: var(--font-size);
+    }
+}
+.d-block h2 {
+    font-size: var(--font-size);
+    color: var(--text-color)
+}
+
+
+
+
+
+@import "partials/footer";
+
+
+
+
+
+
+.Container{
+    padding-inline: 25vw;
+}
+@media screen and (max-width: 1280px) {
+    .Container{
+        padding-inline: 18vw;
+    }
+}
+@media screen and (max-width: 1050px) {
+    .Container{
+        padding-inline: 12vw;
+    }
+}
+@media screen and (max-width: 768px) {
+    .Container{
+        padding-inline: 6vw;
+    }
+    .NavBarContainer { 
+        .Nav-Links{
+            display: none;
+        }
+        .Burger-Icon{
+            display: block;
+        }
+    }
+    .skill-item{
+        display: inline-block;
+        margin: 0.75em;
+
+    }
+    .section.improveskills .button{
+        display: block;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+    .chief-card {
+        box-shadow: 0 5px 10px var(--shadow-color);
+    }
+    .section{
+        .col{
+            width: 100%;
+            padding: 0 !important;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+    }
+    .footer {
+        grid-template-columns: repeat(4, 1fr);
+        .footer-section:nth-child(1){
+            grid-column: span 4;
+        }
+        .footer-section:nth-child(2), .footer-section:nth-child(3){
+            grid-column: span 2;
+        }
+    }
+    
+}
+@media screen and (max-width: 480px) {
+    .Container{
+        padding-inline: 3vw;
+    }
+}
