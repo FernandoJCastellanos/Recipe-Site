@@ -12,7 +12,7 @@
             padding: 0.1em 0 0.1em 0.5em;
             color: var(--text-light);
             font-weight: bold;
-            font-size: 1em;
+            font-size: calc(var(--font-size) * 1);
             transform: translateX(100%);
             opacity: 0;
             animation: getAnimationDuration(0.3s) slideInRight forwards;

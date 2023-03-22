@@ -9,10 +9,11 @@
         p{
             opacity: 0.9;
             margin-bottom: 0.5em;
+            font-size: calc(var(--font-size) * 1.2);
         }
         p.title{
             opacity: 1;
-            font-size: 1.1em;
+            font-size: calc(var(--font-size) * 1.2);
             font-weight: 1em;
             margin-bottom: 1em;
         }

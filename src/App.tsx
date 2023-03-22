@@ -14,10 +14,12 @@ import Recipes from './pages/Recipes';
 import Settings from './pages/Settings';
 import Footer from "./components/Footer";
 
+import AppContextProvider from "./AppContext";
 
 
 function App() {
   return (
+    <AppContextProvider>
       <Router >
         <header>
           <NavBar />
@@ -35,6 +37,7 @@ function App() {
           <Footer />
         </footer>
       </Router>
+    </AppContextProvider>
   )
 }
 

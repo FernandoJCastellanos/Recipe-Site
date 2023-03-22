@@ -36,7 +36,7 @@ export default function Recipes() {
             <PreviousSearches />
             <div className="recipes-container">
                 {recipes.map((recipe, index) => (
-                    <RecipeCard key={index} recipe={recipe} />
+                    <RecipeCard key={index} recipe={recipe} index={index}/>
                 ))}
                 
             </div>
