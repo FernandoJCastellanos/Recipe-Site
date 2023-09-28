@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Recipe-Site/static/css/main.359cbbfc.css",
-    "main.js": "/Recipe-Site/static/js/main.0b074465.js",
+    "main.js": "/Recipe-Site/static/js/main.9c4d7e00.js",
     "static/js/787.28cb0dcd.chunk.js": "/Recipe-Site/static/js/787.28cb0dcd.chunk.js",
     "static/media/img_2.jpg": "/Recipe-Site/static/media/img_2.71bb566e061dd99e062c.jpg",
     "static/media/img_3.jpg": "/Recipe-Site/static/media/img_3.b6f7033b2dea95b41ed9.jpg",
@@ -15,11 +15,11 @@
     "static/media/img_5.jpg": "/Recipe-Site/static/media/img_5.eec0e06115382189cc2d.jpg",
     "index.html": "/Recipe-Site/index.html",
     "main.359cbbfc.css.map": "/Recipe-Site/static/css/main.359cbbfc.css.map",
-    "main.0b074465.js.map": "/Recipe-Site/static/js/main.0b074465.js.map",
+    "main.9c4d7e00.js.map": "/Recipe-Site/static/js/main.9c4d7e00.js.map",
     "787.28cb0dcd.chunk.js.map": "/Recipe-Site/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.359cbbfc.css",
-    "static/js/main.0b074465.js"
+    "static/js/main.9c4d7e00.js"
   ]
 }
