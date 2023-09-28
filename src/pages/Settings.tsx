@@ -1,92 +1,71 @@
-// Environment
-import {useContext} from "react"
-
-// Content
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCheck } from "@fortawesome/free-solid-svg-icons"
-
-// Components
-import { AppContext } from "../AppContext"
-
+import { AppContext } from "../AppContext";
+import { useContext } from "react"
 
 export default function Settings(){
 
+    const {primaryColors, fontSizes, animationSpeeds, primaryColor, fontSize, animationSpeed, theme, changeTheme, changeColor, changeFontSize, changeAnimationSpeed}: any = useContext(AppContext);
+   
 
-
-    const {themes, primaryColors, fontSizes, animationSpeeds, primaryColor, fontSize, animationSpeed, theme, settings, changeTheme, changeColor, changeFontSize, changeAnimationSpeed}: any = useContext(AppContext);
-
-    return(
+    return (
         <div>
-            {/* Background color */}
             <div className="section d-block">
-                <h2>
-                    Background theme
-                </h2>
-                <div className="options-container" >
-                    <div className="option light" onClick={()=> changeTheme(0)}>
-                        {theme === "light" && (
+                <h2>Primary Theme</h2>
+                <div className="options-container">
+                    <div className="option light" onClick={() => changeTheme(0)}>
+                        { theme === "light" && (
                             <div className="check">
                                 <FontAwesomeIcon icon={faCheck} />
                             </div>
-                        )}
+                        ) }
                     </div>
-                    <div className="option dark" onClick={()=> changeTheme(1)}>
-                    {theme === "dark" && (
+                    <div className="option dark" onClick={() => changeTheme(1)}>
+                        { theme === "dark" && (
                             <div className="check">
                                 <FontAwesomeIcon icon={faCheck} />
                             </div>
-                        )}
+                        ) }
                     </div>
                 </div>
             </div>
-            {/* Primary Color */}
             <div className="section d-block">
-                <h2>
-                    Preferred Color
-                </h2>
+                <h2>Preferred color</h2>
                 <div className="options-container">
-                   {primaryColors.map((color: any, index: any) => 
-                   <div className="option light" style={{backgroundColor: color}} onClick={() => changeColor(index)}>
-                        {primaryColor === index && (
-                            <div className="check">
-                                <FontAwesomeIcon icon={faCheck} />
-                            </div>
-                        )}
-                    </div>
-                   )}
+                    { primaryColors.map((color:any, index:any) => (
+                        <div key={index} className="option light" style={{backgroundColor: color}} onClick={() => changeColor(index)}>
+                            { primaryColor === index && (
+                                <div className="check">
+                                    <FontAwesomeIcon icon={faCheck} />
+                                </div>
+                            ) }
+                        </div>
+                    ))}
                 </div>
             </div>
-            {/* Font Size */}
             <div className="section d-block">
-                <h2>
-                    Font Size
-                </h2>
+                <h2>Font size</h2>
                 <div className="options-container">
-                   {fontSizes.map((size: any, index: any) => (
-                <button className="button" onClick={()=> changeFontSize(index)}>
-                    {size.title}
-                    {fontSize === index && <span><FontAwesomeIcon icon={faCheck} /></span>}
-                </button>
-                   ))}
+                    { fontSizes.map((size:any, index:any) => (
+                        <button key={index} className="btn" onClick={() => changeFontSize(index)}>
+                            {size.title}
+                            { fontSize === index && <span><FontAwesomeIcon icon={faCheck} /></span> }
+                        </button>
+                    ))}
                 </div>
             </div>
-
-            {/* Animation Speed */}
             <div className="section d-block">
-                <h2>
-                    Animation Speed
-                </h2>
+                <h2>Animation speed</h2>
                 <div className="options-container">
-                   {animationSpeeds.map((speed: any, index: any) =>( 
-                <button className="button" onClick={()=> changeAnimationSpeed(index)}>
-                    {speed.title}
-                    {animationSpeed === index && <span><FontAwesomeIcon icon={faCheck} /></span>}
-                </button>
-                   ))}
+                    { animationSpeeds.map((speed:any, index:any) => (
+                        <button key={index} className="btn" onClick={() => changeAnimationSpeed(index)}>
+                            {speed.title}
+                            { animationSpeed === index && <span><FontAwesomeIcon icon={faCheck} /></span> }
+                        </button>
+                    ))}
                 </div>
             </div>
-
-
+            
         </div>
     )
 }

@@ -1,5 +1,17 @@
 import CostumeImages from "./CostumeImages";
 
+
+
+import img1 from "../content/gallery-preview/img_1.jpg"
+import img2 from "../content/gallery-preview/img_2.jpg"
+import img3 from "../content/gallery-preview/img_3.jpg"
+import img4 from "../content/gallery-preview/img_4.jpg"
+import img5 from "../content/gallery-preview/img_5.jpg"
+import img6 from "../content/gallery-preview/img_6.jpg"
+import img7 from "../content/gallery-preview/img_7.jpg"
+import img8 from "../content/gallery-preview/img_8.jpg"
+import img9 from "../content/gallery-preview/img_9.jpg"
+
 // CSS
 import "../styles/index.scss";
 
@@ -8,17 +20,16 @@ import "../styles/index.scss";
 export default function HeroSection(){
 
     const images = [
-        "/content/gallery-preview/img_1.jpg",
-        "/content/gallery-preview/img_2.jpg",
-        "/content/gallery-preview/img_3.jpg",
-        "/content/gallery-preview/img_4.jpg",
-        "/content/gallery-preview/img_5.jpg",
-        "/content/gallery-preview/img_6.jpg",
-        "/content/gallery-preview/img_7.jpg",
-        "/content/gallery-preview/img_8.jpg",
-        "/content/gallery-preview/img_9.jpg"
+        img1,
+        img2,
+        img3,
+        img4,
+        img5,
+        img6,
+        img7,
+        img8,
+        img9
     ]
-
     return (
         <div className="section hero">
             <div className="col typography ">

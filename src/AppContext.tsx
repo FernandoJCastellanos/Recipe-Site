@@ -122,28 +122,28 @@ const AppContextProvider = (props: any) => {
     const [primaryColor, setPrimaryColor] = useState(()=>{
         const primaryColorString: any = localStorage.getItem("primaryColorSetItem")
         const localPrimaryColor: any = parseInt(JSON.parse(primaryColorString))
-        if(typeof localPrimaryColor !== 'undefined' && localPrimaryColor !== null){
-            return JSON.parse(localPrimaryColor);
+        if(localPrimaryColor){
+            return localPrimaryColor;
         }else{
-            return "0";
+            return 0;
         }
-    })
+    })    
     const [fontSize, setFontSize] = useState(()=>{
         const fontSizeString: any = localStorage.getItem("fontSizeSetItem")
         const localFontSize: any = parseInt(JSON.parse(fontSizeString))
-        if(typeof localFontSize !== 'undefined' && localFontSize !== null){
-            return JSON.parse(localFontSize);
+        if(localFontSize){
+            return localFontSize;
         }else{
-            return "1";
+            return 1;
         }
-    })
+    })   
     const [animationSpeed, setAnimationSpeed] = useState(()=>{
         const animationSpeedString: any = localStorage.getItem("animationSpeedSetItem")
         const localAnimationSpeed: any = parseInt(JSON.parse(animationSpeedString))
-        if(typeof localAnimationSpeed !== 'undefined' && localAnimationSpeed !== null){
-            return JSON.parse(localAnimationSpeed);
+        if(localAnimationSpeed){
+            return localAnimationSpeed;
         }else{
-            return "1";
+            return 1;
         }
     })
  
@@ -233,7 +233,9 @@ const AppContextProvider = (props: any) => {
     
 
 
-    const contextValue: any = {themes, primaryColors, fontSizes, animationSpeeds, primaryColor, fontSize, animationSpeed, theme, settings, changeTheme, changeColor, changeFontSize, changeAnimationSpeed};
+    const contextValue: any = {
+        themes, primaryColors, fontSizes, animationSpeeds, primaryColor, fontSize, animationSpeed, theme, settings, changeTheme, changeColor, changeFontSize, changeAnimationSpeed
+    };
 
 
 
@@ -244,7 +246,7 @@ const AppContextProvider = (props: any) => {
         // You pass it down as a value attribute so you can deconstruct it in other components
         // this is how we package and transfer functions from components
         <AppContext.Provider value ={contextValue} >
-        {props.children}
+            {props.children}
         </AppContext.Provider>
     )
 };

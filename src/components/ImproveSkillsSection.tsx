@@ -1,7 +1,7 @@
 // CSS
 import "../styles/index.scss";
 
-
+import image from "../content/gallery-preview/img_10.jpg"
 export default function ImproveSkillsSection() {
 
     const list = [
@@ -17,7 +17,7 @@ export default function ImproveSkillsSection() {
 
     <div className="section improveskills">
         <div className="col img">
-            <img src="/content/gallery-preview/img_10.jpg" alt="" />
+            <img src={image} alt="" />
         </div>
         <div className="col typography ">
             <h1 className="title">
