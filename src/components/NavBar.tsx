@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 
-
 // Environment
 import { useState } from "react"
 import { faHome, faList, faCog } from "@fortawesome/free-solid-svg-icons";

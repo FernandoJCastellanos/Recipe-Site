@@ -23,8 +23,8 @@ function App() {
 
 
   return (
-    <AppContextProvider>
-      <Router >
+    <AppContextProvider >
+      <Router basename={process.env.PUBLIC_URL}>
         <div >
           <header>
             <NavBar />
